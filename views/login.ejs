@@ -1,0 +1,22 @@
+<%-include('./partials/header.ejs')%>
+<h1 class="text-center mt-5">Login</h1>
+<div class="row">
+    <div class="col-4 offset-4">
+        <%-include('./flash.ejs')%> 
+        <form class="form-validation" action="/login" method="POST" novalidate>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input id="password" name="password" type="password" class="form-control" required>
+            </div>
+            <div class="text-center center">
+                <button type="submit" class="btn btn-primary px-4">Login</button>
+                <button class="btn btn-success px-3"><a style="text-decoration: none; color: white;" href="/register">Register</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+<%-include('./partials/footer.ejs') %>  
